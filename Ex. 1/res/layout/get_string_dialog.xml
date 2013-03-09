@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+    
+    <TextView 
+        android:id="@+id/enter_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_phrase"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true" />
+    
+    <EditText 
+        android:id="@+id/phrase_field"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phrase_hint"
+        android:layout_below="@id/enter_string"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+    
+    <Button 
+        android:id="@+id/create_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_code"
+        android:layout_below="@id/phrase_field"
+        android:background="@drawable/button"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+    
+
+</RelativeLayout>

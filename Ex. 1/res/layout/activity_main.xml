@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView 
+        android:id="@+id/menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_sensor"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true" />
+    
+    
+    <Button
+        android:id="@+id/scan_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_qr"
+        android:background="@drawable/button"
+        android:padding="5dp"
+        android:layout_below="@id/menu_title"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+    
+    <Button
+        android:id="@+id/generate_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/generate_qr"
+        android:background="@drawable/button"
+        android:padding="5dp"
+        android:layout_below="@id/scan_qr"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    
+    <Button
+        android:id="@+id/linear_acceleration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/linear_acceleration"
+        android:background="@drawable/button"
+        android:padding="5dp"
+        android:layout_below="@id/generate_qr"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    
+    <Button
+        android:id="@+id/azimuth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/azimuth"
+        android:background="@drawable/button"
+        android:padding="5dp"
+        android:layout_below="@id/linear_acceleration"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    
+    <Button
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/light"
+        android:background="@drawable/button"
+        android:padding="5dp"
+        android:layout_below="@id/azimuth"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    
+    <Button
+        android:id="@+id/pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pressure"
+        android:background="@drawable/button"
+        android:padding="5dp"
+        android:layout_below="@id/light"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

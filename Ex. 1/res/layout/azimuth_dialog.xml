@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+    
+    <TextView
+        android:id="@+id/azimuth_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/X" />
+    
+    <TextView 
+        android:id="@+id/azimuth_x_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_alignBaseline="@id/azimuth_x"
+        android:layout_toRightOf="@id/azimuth_x"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true" />
+    
+     <TextView
+        android:id="@+id/azimuth_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/azimuth_x"
+        android:layout_below="@id/azimuth_x"
+        android:layout_marginTop="24dp"
+        android:text="@string/Y" />
+    
+    <TextView 
+        android:id="@+id/azimuth_y_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_alignBaseline="@id/azimuth_y"
+        android:layout_toRightOf="@id/azimuth_y"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true" />
+    
+    <TextView
+        android:id="@+id/azimuth_z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/azimuth_x"
+        android:layout_below="@id/azimuth_y"
+        android:layout_marginTop="24dp"
+        android:text="@string/Z" />
+    
+    <TextView 
+        android:id="@+id/azimuth_z_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_alignBaseline="@id/azimuth_z"
+        android:layout_toRightOf="@id/azimuth_z"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true" />
+    
+    <Button 
+        android:id="@+id/azimuth_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:layout_below="@id/azimuth_z"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button"
+        android:layout_centerHorizontal="true" />
+    
+</RelativeLayout>
