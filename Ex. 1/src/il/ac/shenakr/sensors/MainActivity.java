@@ -1,7 +1,5 @@
 package il.ac.shenakr.sensors;
 
-import java.util.List;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.Dialog;
@@ -21,6 +19,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity
 {
 	private Activity thisActivity;
+	private Context context;
 	
 	private Button scanQrButton;
 	private Button generateQrButton;
@@ -55,6 +54,7 @@ public class MainActivity extends Activity
 		setContentView(R.layout.activity_main);
 		
 		thisActivity = this;
+		context = getApplicationContext();
 		
 		scanQrButton = (Button) findViewById(R.id.scan_qr);
 		generateQrButton = (Button) findViewById(R.id.generate_qr);
@@ -219,6 +219,13 @@ public class MainActivity extends Activity
 			@Override
 			public void onClick(View v)
 			{
+				// Checking if the pressure sensor is available on the device
+				if (sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE) == null)
+				{
+					Toast.makeText(context, "Pressure sensor is not available on your device.", Toast.LENGTH_SHORT).show();
+					return;
+				}
+				
 				showPressureDiaolg = new Dialog(thisActivity);
 				showPressureDiaolg.setContentView(R.layout.pressure_dialog);
 				showPressureDiaolg.setTitle("Pressure Results:");
