@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">MapMarker</string>
+    <string name="marker">Marker</string>
+    <string name="class_img">Class Image</string>
+    <string name="create_marker">Create New Marker</string>
+    <string name="create_description">Set Description</string>
+    <string name="description">Description</string>
+
+</resources>
