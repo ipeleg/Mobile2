@@ -17,5 +17,24 @@
     <string name="signin">Sign In</string>
     <string name="signup">Sign Up</string>
     <string name="logout">Logout</string>
+    <string name="exit">Exit</string>
+    <string name="settinges">Settinges</string>
+    <string name="interval">Intervals</string>
+    <string name="update_interval">Update Interval</string>
+    <string name="update_interval_summary">Choose interval time for updating the markers.</string>
+    
+    <string-array name="interval_list">
+        <item>1 Minute</item>
+        <item>2 Minute</item>
+        <item>5 Minute</item>
+        <item>10 Minute</item>
+    </string-array>
+    
+        <string-array name="interval_list_values">
+        <item>60000</item>
+        <item>120000</item>
+        <item>300000</item>
+        <item>600000</item>
+    </string-array>
 
 </resources>

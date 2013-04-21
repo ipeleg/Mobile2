@@ -1,7 +1,8 @@
 package il.ac.shenkar.mapmarker;
 
-import il.ac.shenkar.mapmarker.IntentResult;
-import il.ac.shenkar.mapmarker.IntentIntegrator;
+import il.ac.shenkar.mapmarker.qrcode.IntentIntegrator;
+import il.ac.shenkar.mapmarker.qrcode.IntentResult;
+
 import com.parse.Parse;
 import com.parse.ParseUser;
 import android.app.Activity;
@@ -9,6 +10,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.graphics.Matrix;
 import android.os.Bundle;
@@ -28,6 +30,8 @@ public class MainActivity extends Activity
 {
 	private IntentIntegrator integrator;
 	private MarkerHandler markerHandler;
+	private AutoUpdate autoUpdate;
+	
 	private ImageView map;
 	private RelativeLayout relativeLayout;
 	private Dialog qrDialog;
@@ -51,12 +55,12 @@ public class MainActivity extends Activity
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		// Initializing the parse
-		Parse.initialize(this, "7NTkZQ7iCulhrCgT6h6Iux8q0qnr8L1oJDE2yByJ", "aAwkOZKPGi8AUtVn9VSAeat0eQMKJD0pXiGNTuHe");
+		Parse.initialize(this, "7NTkZQ7iCulhrCgT6h6Iux8q0qnr8L1oJDE2yByJ", "aAwkOZKPGi8AUtVn9VSAeat0eQMKJD0pXiGNTuHe"); // Initializing the parse
 		
-		requestWindowFeature(Window.FEATURE_ACTION_BAR);
+		requestWindowFeature(Window.FEATURE_ACTION_BAR); // Setting the action bat at the top of the activity
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_activity);
+		setContentView(R.layout.main_activity); // Setting the layout
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // Disabling the screen rotation
 		
 		thisActivity = this;
 		markerArray = MarkerArray.getInstance();
@@ -73,6 +77,9 @@ public class MainActivity extends Activity
 		scanCodeLocation = (Button) findViewById(R.id.scan_for_location_btn);
 		
 		markerHandler = new MarkerHandler(thisActivity, infoBox, relativeLayout);
+		
+		autoUpdate = new AutoUpdate(markerHandler);
+		autoUpdate.startAutoUpdate(); // Will update the markers every 1 minute
 		
 		markerHandler.getMarkers();
 
@@ -270,9 +277,19 @@ public class MainActivity extends Activity
     {
     	switch(item.getItemId())
     	{
+			case R.id.settinges:
+				Intent intent = new Intent(this, SetSettingesActivity.class);
+				startActivity(intent);
+				break;
+    	
     		case R.id.logout:
     			ParseUser.logOut();
     			finish();
+    			break;
+    			
+    		case R.id.exit:
+    			autoUpdate.removeRunnable(); // Stopping the handler
+    			finish(); // Finishing the main activity
     			break;
     	}
     	return true;

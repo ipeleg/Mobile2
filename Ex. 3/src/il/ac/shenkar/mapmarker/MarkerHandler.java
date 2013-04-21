@@ -51,7 +51,7 @@ public class MarkerHandler
 		this.relativeLayout = relativeLayout;
 	}
 
-	// Function for creating the marker and the gesture listener
+	// Method for creating the marker and the gesture listener
 	public void addMarkerToMap(Marker markerToAdd)
 	{
 		LayoutInflater inflater = LayoutInflater.from(thisActivity);
@@ -91,7 +91,7 @@ public class MarkerHandler
 		animation.start();
 	}
 	
-	// Function for asking the user for marker description and creating it
+	// Method for asking the user for marker description and creating it
 	public void createMarker(final String qrStringCode, final float x, final float y)
 	{
 		// Checking if there is already a marker with this code
@@ -142,7 +142,7 @@ public class MarkerHandler
 		});		
 	}
 	
-	// Function for downloading all the markers from the server
+	// Method for downloading all the markers from the server
 	public void getMarkers()
 	{
 		ParseQuery query  = new ParseQuery("Marker");
@@ -167,5 +167,14 @@ public class MarkerHandler
 				progressDialog.dismiss();
 			}
 		});
+	}
+	
+	// Method for clearing the markers form the array and the view
+	public void clearAllMarkersFromMap()
+	{
+		for (int i =0 ; i<markerArray.getArraySize() ; ++i)
+			relativeLayout.removeView(markerArray.getMarker(i).getMarkerImage()); // Clearing all the markers from the view
+		
+		markerArray.removeAllMarkers(); // Clearing the array
 	}
 }

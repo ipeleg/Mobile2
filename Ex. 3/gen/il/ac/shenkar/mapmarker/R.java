@@ -8,6 +8,10 @@
 package il.ac.shenkar.mapmarker;
 
 public final class R {
+    public static final class array {
+        public static final int interval_list=0x7f060000;
+        public static final int interval_list_values=0x7f060001;
+    }
     public static final class attr {
     }
     public static final class drawable {
@@ -19,29 +23,31 @@ public final class R {
         public static final int pernick_building=0x7f020005;
     }
     public static final class id {
-        public static final int description_field=0x7f070000;
-        public static final int dialog_map=0x7f070002;
-        public static final int email_signup_field=0x7f070014;
-        public static final int email_signup_view=0x7f070013;
-        public static final int info_box=0x7f070005;
-        public static final int logout=0x7f070016;
-        public static final int main_layout=0x7f070003;
-        public static final int map=0x7f070004;
-        public static final int password_login_field=0x7f07000d;
-        public static final int password_login_view=0x7f07000c;
-        public static final int password_signup_field=0x7f070012;
-        public static final int password_signup_view=0x7f070011;
-        public static final int qr_explanation=0x7f070007;
-        public static final int scan_for_location_btn=0x7f070006;
-        public static final int scan_qr_btn=0x7f070008;
-        public static final int set_description=0x7f070001;
-        public static final int signin_btn=0x7f07000e;
-        public static final int signup_btn=0x7f070015;
-        public static final int username_login_field=0x7f07000b;
-        public static final int username_login_view=0x7f07000a;
-        public static final int username_signup_field=0x7f070010;
-        public static final int username_signup_view=0x7f07000f;
-        public static final int welcome_view=0x7f070009;
+        public static final int description_field=0x7f090000;
+        public static final int dialog_map=0x7f090002;
+        public static final int email_signup_field=0x7f090014;
+        public static final int email_signup_view=0x7f090013;
+        public static final int exit=0x7f090018;
+        public static final int info_box=0x7f090005;
+        public static final int logout=0x7f090017;
+        public static final int main_layout=0x7f090003;
+        public static final int map=0x7f090004;
+        public static final int password_login_field=0x7f09000d;
+        public static final int password_login_view=0x7f09000c;
+        public static final int password_signup_field=0x7f090012;
+        public static final int password_signup_view=0x7f090011;
+        public static final int qr_explanation=0x7f090007;
+        public static final int scan_for_location_btn=0x7f090006;
+        public static final int scan_qr_btn=0x7f090008;
+        public static final int set_description=0x7f090001;
+        public static final int settinges=0x7f090016;
+        public static final int signin_btn=0x7f09000e;
+        public static final int signup_btn=0x7f090015;
+        public static final int username_login_field=0x7f09000b;
+        public static final int username_login_view=0x7f09000a;
+        public static final int username_signup_field=0x7f090010;
+        public static final int username_signup_view=0x7f09000f;
+        public static final int welcome_view=0x7f090009;
     }
     public static final class layout {
         public static final int get_description_dialog=0x7f030000;
@@ -52,26 +58,31 @@ public final class R {
         public static final int sign_in=0x7f030005;
     }
     public static final class menu {
-        public static final int action_bar=0x7f060000;
+        public static final int action_bar=0x7f080000;
     }
     public static final class string {
-        public static final int app_name=0x7f040000;
-        public static final int class_img=0x7f040002;
-        public static final int create_description=0x7f040004;
-        public static final int create_marker=0x7f040003;
-        public static final int description=0x7f040005;
-        public static final int email=0x7f04000d;
-        public static final int logout=0x7f040010;
-        public static final int marker=0x7f040001;
-        public static final int password=0x7f04000c;
-        public static final int qr_explanation=0x7f040006;
-        public static final int scan_for_location=0x7f040008;
-        public static final int scan_qr=0x7f040007;
-        public static final int sign_in=0x7f04000a;
-        public static final int signin=0x7f04000e;
-        public static final int signup=0x7f04000f;
-        public static final int username=0x7f04000b;
-        public static final int welcome=0x7f040009;
+        public static final int app_name=0x7f050000;
+        public static final int class_img=0x7f050002;
+        public static final int create_description=0x7f050004;
+        public static final int create_marker=0x7f050003;
+        public static final int description=0x7f050005;
+        public static final int email=0x7f05000d;
+        public static final int exit=0x7f050011;
+        public static final int interval=0x7f050013;
+        public static final int logout=0x7f050010;
+        public static final int marker=0x7f050001;
+        public static final int password=0x7f05000c;
+        public static final int qr_explanation=0x7f050006;
+        public static final int scan_for_location=0x7f050008;
+        public static final int scan_qr=0x7f050007;
+        public static final int settinges=0x7f050012;
+        public static final int sign_in=0x7f05000a;
+        public static final int signin=0x7f05000e;
+        public static final int signup=0x7f05000f;
+        public static final int update_interval=0x7f050014;
+        public static final int update_interval_summary=0x7f050015;
+        public static final int username=0x7f05000b;
+        public static final int welcome=0x7f050009;
     }
     public static final class style {
         /** 
@@ -95,10 +106,13 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f070001;
+    }
+    public static final class xml {
+        public static final int settinges=0x7f040000;
     }
 }

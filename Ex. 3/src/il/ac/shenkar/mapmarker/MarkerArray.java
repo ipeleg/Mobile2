@@ -40,6 +40,11 @@ public class MarkerArray
 		markersArray.remove(marker);
 	}
 	
+	public void removeAllMarkers()
+	{
+		markersArray.clear();
+	}
+	
 	public Marker getMarker(int index)
 	{
 		return markersArray.get(index);
